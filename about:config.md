@@ -131,6 +131,14 @@ If you (additionally) want to force the usage of PFS, the only enabled ciphers s
 security.ssl3.rsa_aes_256_sha=false
 ```
 
+### Force TLS 1.2
+
+This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors. Be warned that not many websites support this.
+
+```
+security.tls.version.min=3
+```
+
 # Recommended addons (bonus)
 
 In addition to the above settings, I personally recommend the usage of at least the following addons:

@@ -98,7 +98,7 @@ privacy.trackingprotection.enabled=true
 privacy.donottrackheader.enabled=true
 ```
 
-## Stat tracking / telemtry
+## Stat tracking / telemetry
 
 These are used by Mozilla to spy on you, and are as such a significant risk to privacy.
 

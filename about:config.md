@@ -118,7 +118,7 @@ network.http.speculative-parallel-limit=0
 
 ## Cryptography hardening
 
-This disables algorithms that are known to be weak or broken, and prevents most common attack vectors. The settings presented here are somewhat conservative, as to avoid breaking the vast majority of the internet.
+This disables algorithms that are known to be weak or broken, and prevents most common attack vectors. Be warned that this may break some older websites that are not compatible with modern protocols.
 
 ### General settings
 
@@ -153,7 +153,7 @@ security.ssl3.ecdhe_rsa_rc4_128_sha=false
 
 ### Perfect forward secrecy
 
-If you (additionally) want to force the usage of PFS, the only enabled ciphers should be of the ecdhe/dhe variants.
+If you (additionally) want to force the usage of PFS, the only enabled ciphers should be of the ecdhe/dhe variants. Might break *lots* of stuff.
 
 ```
 security.ssl3.rsa_aes_256_sha=false
@@ -161,7 +161,7 @@ security.ssl3.rsa_aes_256_sha=false
 
 ### Force TLS 1.2
 
-This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors. Be warned that not this may break some websites.
+This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors.
 
 ```
 security.tls.version.min=3

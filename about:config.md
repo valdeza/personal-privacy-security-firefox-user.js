@@ -1,5 +1,7 @@
 # Firefox bullshit removal
 
+Due to the incessant swarm of complete and utter nonsense that has been forcing its way into Firefox over time, I've decided to start collecting my personal list of “must-have” about:config tweaks required to turn Firefox into a functional brower.
+
 ## WebSockets
 
 These can be used for nefarious purposes and to bypass access restrictions.
@@ -111,7 +113,7 @@ security.OCSP.require=true
 
 ### Disable unnecessary protocols
 
-This disables 128-bit protocols (which may be weaker against potential partial breaks), older protocols (3DES, RC4) and known weak or broken algorithms.
+This disables 128-bit protocols (which may be weaker against potential partial breaks), older protocols (3DES, RC4) and known weak or broken algorithms (MD5).
 
 ```
 security.ssl3.rsa_rc4_128_sha=false
@@ -123,7 +125,7 @@ security.ssl3.dhe_rsa_aes_128_sha=false
 
 ### Perfect forward secrecy
 
-If you (additionally) want to force the usage of PFS, the only enabled ciphers should be of the ecdhe variant. Be warned that not many websites support this.
+If you (additionally) want to force the usage of PFS, the only enabled ciphers should be of the ecdhe/dhe variants. Be warned that not many websites support this.
 
 ```
 security.ssl3.rsa_aes_256_sha=false
@@ -133,6 +135,6 @@ security.ssl3.rsa_aes_256_sha=false
 
 In addition to the above settings, I personally recommend the usage of at least the following addons:
 
-- HTTPS Everywhere: Prefer HTTPS over HTTP even for sites that do not force HSTS.
-- uBlock Origin: Block access to all known ads, malware domains, badware, and other malicious scripts and domains.
-- uMatrix or NoScript+RequestPolicy: Block scripts, images, CSS, objects and other (possibly external) requests by default, using a whitelist to selectively allow them. This is highly recommended as they all pose significant threats to security and privacy.
+- ![HTTPS Everywhere](https://www.eff.org/https-everywhere): Prefer HTTPS over HTTP even for sites that do not force HSTS.
+- ![uBlock Origin](https://github.com/gorhill/uBlock): Block access to all known ads, malware domains, badware, and other malicious scripts and domains.
+- ![uMatrix](https://github.com/gorhill/uMatrix) or ![NoScript](https://noscript.net/)+![RequestPolicy](https://requestpolicycontinued.github.io/): Block scripts, images, CSS, objects and other (possibly external) requests by default, using a whitelist to selectively allow them. This is highly recommended as they all pose significant threats to security and privacy.

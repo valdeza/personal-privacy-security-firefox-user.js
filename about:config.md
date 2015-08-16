@@ -76,6 +76,15 @@ camera.control.face_detection.enabled=false
 camera.control.autofocus_moving_callback.enabled=false
 ```
 
+## Tracking protection
+
+This makes Firefox block known tracking domains by default, and send tracking opt-out headers.
+
+```
+privacy.trackingprotection.enabled=true
+privacy.donottrackheader.enabled=true
+```
+
 ## Stat tracking / telemtry
 
 These are used by Mozilla to spy on you, and are as such a significant risk to privacy.

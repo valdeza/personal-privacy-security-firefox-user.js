@@ -54,6 +54,17 @@ These can be used for tracking and fingerprinting services and are harmful to yo
 browser.beacen.enabled=false
 geo.enabled=false
 geo.wifi.logging.enabled=false
+geo.wifi.uri=""
+```
+
+## Safe browsing
+
+This sends your browsing habits to third party services like Google.
+
+```
+browser.safebrowsing.enabled=false
+browser.safebrowsing.downloads.enabled=false
+browser.safebrowsing.malware.enabled=false
 ```
 
 ## Social media integration
@@ -62,6 +73,8 @@ This anti-feature lets social media platforms integrate directly into your brows
 
 ```
 social.directories=""
+social.whitelist=""
+social.manifest.facebook=""
 social.remote-install.enabled=false
 social.toast-notifications.enabled=false
 ```

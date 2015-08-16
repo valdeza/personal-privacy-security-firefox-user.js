@@ -130,6 +130,12 @@ security.ssl3.rsa_rc4_128_md5=false
 security.ssl3.rsa_des_ede3_sha=false
 security.ssl3.rsa_aes_128_sha=false
 security.ssl3.dhe_rsa_aes_128_sha=false
+security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256=false
+security.ssl3.ecdhe_ecdsa_aes_128_sha=false
+security.ssl3.ecdhe_ecdsa_rc4_128_sha=false
+security.ssl3.ecdhe_rsa_aes_128_gcm_sha256=false
+security.ssl3.ecdhe_rsa_aes_128=false
+security.ssl3.ecdhe_rsa_rc4_128_sha=false
 ```
 
 ### Perfect forward secrecy

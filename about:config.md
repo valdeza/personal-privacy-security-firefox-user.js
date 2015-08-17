@@ -59,7 +59,7 @@ geo.wifi.uri=""
 
 ## Safe browsing
 
-This sends your browsing habits to third party services like Google.
+This requires Firefox to communicate with a third party, Google by default, and also sends them metadata about your downloads.
 
 ```
 browser.safebrowsing.enabled=false

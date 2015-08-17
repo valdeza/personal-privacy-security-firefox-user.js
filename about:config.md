@@ -178,6 +178,6 @@ security.tls.version.min=3
 
 In addition to the above settings, I personally recommend the usage of at least the following addons:
 
-- ![HTTPS Everywhere](https://www.eff.org/https-everywhere): Prefer HTTPS over HTTP even for sites that do not force HSTS.
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere): Prefer HTTPS over HTTP even for sites that do not force HSTS.
 - [μBlock₀](https://github.com/gorhill/uBlock): Block access to all known ads, malware domains, badware, and other malicious scripts and domains.
-- [uMatrix](https://github.com/gorhill/uMatrix) or ![NoScript](https://noscript.net/)+![RequestPolicy](https://requestpolicycontinued.github.io/): Block scripts, images, CSS, objects and other (possibly external) requests by default, using a whitelist to selectively allow them. This is highly recommended as they all pose significant threats to security and privacy.
+- [uMatrix](https://github.com/gorhill/uMatrix) or [NoScript](https://noscript.net/)+[RequestPolicy](https://requestpolicycontinued.github.io/): Block scripts, images, CSS, objects and other (possibly external) requests by default, using a whitelist to selectively allow them. This is highly recommended as they all pose significant threats to security and privacy.

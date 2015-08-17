@@ -91,10 +91,17 @@ camera.control.autofocus_moving_callback.enabled=false
 
 ## Tracking protection
 
-This makes Firefox block known tracking domains by default, and send tracking opt-out headers.
+This makes Firefox block known tracking domains by default.
 
 ```
 privacy.trackingprotection.enabled=true
+```
+
+### DNT Header
+
+This makes Firefox include a DNT (“do not track”) header in its request. Theoretically, this would opt-out of tracking services for some services, but unfortunately it makes your fingerprint *much* more trackable, as this header is not too common. Enable if it you want, but it's probably best to leave it off to prevent tracking.
+
+```
 privacy.donottrackheader.enabled=true
 ```
 

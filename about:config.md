@@ -162,7 +162,7 @@ security.ssl3.rsa_aes_256_sha=false
 
 ### Force TLS 1.2
 
-This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors.
+This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors. (Note that TLS technically contains a mechanism for preventing protocol degradation attacks, but it requires participation from both the client and the server - which is not a guarantee in practice)
 
 ```
 security.tls.version.min=3

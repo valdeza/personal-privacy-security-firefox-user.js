@@ -1,4 +1,4 @@
-# Firefox bullshit removal
+# My custom Firefox Bullshit Removal Guide in about:config
 
 Due to the incessant swarm of complete and utter nonsense that has been forcing its way into Firefox over time, I've decided to start collecting my personal list of “must-have” about:config tweaks required to turn Firefox into a functional brower.
 

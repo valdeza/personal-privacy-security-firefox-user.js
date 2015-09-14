@@ -1,6 +1,8 @@
-# My custom Firefox Bullshit Removal Guide in about:config
+# Firefox Security and Privacy Tweaks Guide in about:config
 
-Due to the incessant swarm of complete and utter nonsense that has been forcing its way into Firefox over time, I've decided to start collecting my personal list of “must-have” about:config tweaks required to turn Firefox into a functional brower.
+This is BytesTuner's custom list of “must-have” about:config tweaks required to turn Firefox into a more secure and privacy friendly browser.
+
+Thanks to Niklas Haas for his list! :)
 
 ## WebSockets
 

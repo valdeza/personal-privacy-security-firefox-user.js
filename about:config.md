@@ -15,6 +15,14 @@ browser.newtabpage.directory.ping=""
 browser.newtabpage.directory.source=""
 ```
 
+## Closed tab history
+
+Even with Firefox set to not remember history, your closed tabs are stored temporarily at Menu -> History -> Recently Closed Tabs.
+
+```
+browser.sessionstore.max_tabs_undo = 0
+```
+
 ## WebSockets
 
 These can be used for nefarious purposes and to bypass access restrictions.

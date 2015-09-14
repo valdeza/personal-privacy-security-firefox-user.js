@@ -23,6 +23,15 @@ Even with Firefox set to not remember history, your closed tabs are stored tempo
 browser.sessionstore.max_tabs_undo = 0
 ```
 
+## Cookies
+
+These force FF to only accept cookies from the originating site (block third party cookies) and accept them for the current session only
+
+```
+network.cookie.cookieBehavior = 1
+network.cookie.lifetimePolicy = 2
+```
+
 ## WebSockets
 
 These can be used for nefarious purposes and to bypass access restrictions.

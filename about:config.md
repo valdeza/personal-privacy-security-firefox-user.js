@@ -31,6 +31,13 @@ These force FF to only accept cookies from the originating site (block third par
 network.cookie.cookieBehavior = 1
 network.cookie.lifetimePolicy = 2
 ```
+## Offline cache
+
+Disable offline cache
+
+```
+browser.cache.offline.enable = false
+```
 
 ## WebSockets
 

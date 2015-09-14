@@ -58,13 +58,6 @@ browser.send_pings=false
 webgl.disabled=true
 ```
 
-## Pocket integration
-
-This is a proprietary tie-in service that is a risk to your privacy.
-
-1. Drag the “pocket” icon off your toolbar. This step is important.
-2. ```browser.pocket.enabled=false```
-
 ## WebRTC
 
 This is an inter-browser communication standard that is a **very significant** risk to your privacy and can be used to break out of VPN tunnels, proxies and unmask local users.
@@ -74,14 +67,6 @@ media.peerconnection.enabled=false
 loop.enabled=false
 ```
 
-## DRM
-
-This is a significant breach of your personal freedom and security.
-
-```
-media.eme.enabled=false
-media.gmp-eme-adobe.enabled=false
-```
 
 ## GeoLocation / Beacon
 
@@ -134,13 +119,6 @@ This makes Firefox block known tracking domains by default.
 privacy.trackingprotection.enabled=true
 ```
 
-### DNT Header
-
-This makes Firefox include a DNT (“do not track”) header in its request. Theoretically, this would opt-out of tracking services for some services, but unfortunately it makes your fingerprint *much* more trackable, as this header is not too common. Enable if it you want, but it's probably best to leave it off to prevent tracking.
-
-```
-privacy.donottrackheader.enabled=true
-```
 
 ## Stat tracking / telemetry
 

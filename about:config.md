@@ -1,6 +1,6 @@
 # Firefox security and privacy tweaks list in about:config
 
-This is BytesTuner's custom list of “must-have” tweaks in the about:config settings required to turn Firefox into a more secure and privacy friendly browser.
+This is BytesTuner's custom list of “must-have” tweaks in about:config settings required to turn Firefox into a more secure and privacy friendly browser.
 
 Thanks to Niklas Haas for his personal list! :)
 

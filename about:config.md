@@ -4,7 +4,7 @@ This is BytesTuner's custom list of “must-have” tweaks in the about:config s
 
 Thanks to Niklas Haas for his original personal list! :)
 
-First open a new tab in firefox and type “about:config”. Next,click on “I’ll be careful, I promise!”.
+First open a new tab in firefox and type “about:config”. Next,click on “I’ll be careful, I promise!” and change the following preferences to the recommended value:
 
 ## Built-in Ads system
 

@@ -4,6 +4,15 @@ This is BytesTuner's custom list of “must-have” tweaks in the about:config s
 
 Thanks to Niklas Haas for his original personal list! :)
 
+## Built-in Ads system
+
+Prevent the built-in ads system to send your browsing information to Mozilla.
+
+```
+browser.newtabpage.directory.ping=""
+browser.newtabpage.directory.source=""
+```
+
 ## WebSockets
 
 These can be used for nefarious purposes and to bypass access restrictions.

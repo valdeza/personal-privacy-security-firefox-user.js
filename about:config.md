@@ -2,7 +2,7 @@
 
 This is BytesTuner's custom list of “must-have” tweaks in the about:config settings required to turn Firefox into a more secure and privacy friendly browser.
 
-Thanks to Niklas Haas for his original personal list! :)
+Thanks to Niklas Haas for his personal list! :)
 
 First open a new tab in firefox and type “about:config”. Press Enter. Next, click on “I’ll be careful, I promise!” and search the following preferences. Finally, change them to the recommended values:
 

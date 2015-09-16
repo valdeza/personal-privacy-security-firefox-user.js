@@ -47,7 +47,7 @@ These can be used for nefarious purposes and to bypass access restrictions.
 network.websocket.enabled=false
 ```
 
-## JavaScript spy vectors
+## JavaScript spy vectors *
 
 These can be used for fingerprinting or data collection about the host system.
 

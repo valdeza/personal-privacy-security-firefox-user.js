@@ -85,7 +85,7 @@ geo.wifi.logging.enabled=false
 geo.wifi.uri="" (to verified, not included)
 ```
 
-## Safe browsing
+## Safe browsing *
 
 This requires Firefox to communicate with a third party, Google by default, and also sends them metadata about your downloads.
 

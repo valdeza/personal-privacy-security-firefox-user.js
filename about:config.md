@@ -44,7 +44,7 @@ browser.cache.offline.enable = false
 These can be used for nefarious purposes and to bypass access restrictions.
 
 ```
-network.websocket.enabled=false
+network.websocket.enabled=false *
 ```
 
 ## JavaScript spy vectors

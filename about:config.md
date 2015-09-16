@@ -126,7 +126,7 @@ privacy.trackingprotection.enabled=true
 ```
 
 
-## Stat tracking / telemetry
+## Stat tracking / telemetry *
 
 These are used by Mozilla to spy on you, and are as such a significant risk to privacy.
 

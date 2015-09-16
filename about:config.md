@@ -117,7 +117,7 @@ camera.control.face_detection.enabled=false
 camera.control.autofocus_moving_callback.enabled=false
 ```
 
-## Tracking protection
+## Tracking protection *
 
 This makes Firefox block known tracking domains by default.
 

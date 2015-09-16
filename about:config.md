@@ -107,7 +107,7 @@ social.remote-install.enabled=false
 social.toast-notifications.enabled=false
 ```
 
-## Device tracking/statistics
+## Device tracking/statistics *
 
 These can be used to fingerprint your system and track you.
 

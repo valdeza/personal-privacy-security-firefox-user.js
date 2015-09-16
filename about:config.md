@@ -58,15 +58,21 @@ browser.send_pings=false
 webgl.disabled=true
 ```
 
-## WebRTC
+## WebRTC *
 
 This is an inter-browser communication standard that is a **very significant** risk to your privacy and can be used to break out of VPN tunnels, proxies and unmask local users.
 
 ```
 media.peerconnection.enabled=false
-loop.enabled=false
 ```
 
+## Integration *
+
+Firefox connects to third-party (Telefonica) servers without asking for permission.
+
+```
+loop.enabled=false
+```
 
 ## GeoLocation / Beacon
 

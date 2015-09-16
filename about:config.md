@@ -74,15 +74,15 @@ Firefox connects to third-party (Telefonica) servers without asking for permissi
 loop.enabled=false
 ```
 
-## GeoLocation / Beacon
+## GeoLocation / Beacon *
 
 These can be used for tracking and fingerprinting services and are harmful to your privacy
 
 ```
-browser.beacen.enabled=false
+browser.beacon.enabled=false
 geo.enabled=false
 geo.wifi.logging.enabled=false
-geo.wifi.uri=""
+geo.wifi.uri="" (to verified, not included)
 ```
 
 ## Safe browsing

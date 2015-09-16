@@ -66,7 +66,7 @@ This is an inter-browser communication standard that is a **very significant** r
 media.peerconnection.enabled=false
 ```
 
-## Integration *
+## Firefox Hello Integration *
 
 Firefox connects to third-party (Telefonica) servers without asking for permission.
 

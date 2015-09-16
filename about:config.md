@@ -39,6 +39,15 @@ Disable offline cache
 browser.cache.offline.enable = false
 ```
 
+## Link pre-fetching
+
+These will make Firefox connect with *arbitrary* links on a page by the simple act of hovering over them, without your explicit permission.
+
+```
+network.http.speculative-parallel-limit=0
+```
+
+
 ## WebSockets *
 
 These can be used for nefarious purposes and to bypass access restrictions.
@@ -124,13 +133,6 @@ datareporting.healthreport.uploadEnabled=false
 toolkit.telemetry.enabled=false
 ```
 
-## Link pre-fetching
-
-These will make Firefox connect with *arbitrary* links on a page by the simple act of hovering over them, without your explicit permission.
-
-```
-network.http.speculative-parallel-limit=0
-```
 
 ## Cryptography hardening
 

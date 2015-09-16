@@ -95,18 +95,6 @@ browser.safebrowsing.downloads.enabled=false
 browser.safebrowsing.malware.enabled=false
 ```
 
-## Social media integration
-
-This anti-feature lets social media platforms integrate directly into your browser
-
-```
-social.directories=""
-social.whitelist=""
-social.manifest.facebook=""
-social.remote-install.enabled=false
-social.toast-notifications.enabled=false
-```
-
 ## Device tracking/statistics *
 
 These can be used to fingerprint your system and track you.

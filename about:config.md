@@ -8,7 +8,7 @@ First open a new tab in firefox and type “about:config”. Press Enter. Next, 
 
 ## Built-in Ads system
 
-Prevent the new built-in ads system to send your browsing information to Mozilla.
+Prevent the new built-in ads system to send your browsing information to Mozilla by removing the values from these preferences.
 
 ```
 browser.newtabpage.directory.ping=""

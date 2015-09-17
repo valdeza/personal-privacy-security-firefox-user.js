@@ -49,7 +49,7 @@ network.http.speculative-parallel-limit=0
 
 # All the following settings can be easily disabled with a one additional add-on
 
-The new [Privacy Settings](https://addons.mozilla.org/en-GB/firefox/addon/privacy-settings/) can save you a lot of time. 
+The new [Privacy Settings](https://addons.mozilla.org/en-GB/firefox/addon/privacy-settings/) by Jeremy Schomery can save you a lot of time. 
 
 Once you have installed it, open the addon preference by clicking on the shield icon and simply click on the "Privacy (Compatible)" button to enable the recommended settings. This will bring you a maximum privacy configuration but will force settings that might break some secure sites.
 

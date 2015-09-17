@@ -47,85 +47,40 @@ These will make Firefox connect with *arbitrary* links on a page by the simple a
 network.http.speculative-parallel-limit=0
 ```
 
-
-## WebSockets *
-
-These can be used for nefarious purposes and to bypass access restrictions.
+## Network
 
 ```
-network.websocket.enabled=false
+network.websocket.enabled=false *
+network.dns.disablePrefetch=true *
+network.prefetch-next=false *
 ```
 
-## JavaScript spy vectors *
-
-These can be used for fingerprinting or data collection about the host system.
+## Browser:
 
 ```
 dom.event.clipboardevents.enabled=false
 dom.battery.enabled=false
-browser.send_pings=false
-webgl.disabled=true
-```
-
-## WebRTC *
-
-This is an inter-browser communication standard that is a **very significant** risk to your privacy and can be used to break out of VPN tunnels, proxies and unmask local users.
-
-```
-media.peerconnection.enabled=false
-```
-
-## Firefox Hello Integration *
-
-Firefox connects to third-party (Telefonica) servers without asking for permission.
-
-```
-loop.enabled=false
-```
-
-## GeoLocation / Beacon *
-
-These can be used for tracking and fingerprinting services and are harmful to your privacy
-
-```
-browser.beacon.enabled=false
-geo.enabled=false
-geo.wifi.logging.enabled=false
-geo.wifi.uri="" (to verified, not included)
-```
-
-## Safe browsing *
-
-This requires Firefox to communicate with a third party, Google by default, and also sends them metadata about your downloads.
-
-```
 browser.safebrowsing.enabled=false
 browser.safebrowsing.downloads.enabled=false
 browser.safebrowsing.malware.enabled=false
+browser.send_pings=false
+browser.beacon.enabled=false
 ```
 
-## Device tracking/statistics *
-
-These can be used to fingerprint your system and track you.
+## Geolocation:
 
 ```
-device.sensors.enabled=false
-camera.control.face_detection.enabled=false
-camera.control.autofocus_moving_callback.enabled=false
+geo.enabled=false
+geo.wifi.logging.enabled=false
 ```
 
-## Tracking protection *
-
-This makes Firefox block known tracking domains by default.
+## Tracking:
 
 ```
 privacy.trackingprotection.enabled=true
 ```
 
-
-## Stat tracking / telemetry *
-
-These are used by Mozilla to spy on you, and are as such a significant risk to privacy.
+## Stats Collection:
 
 ```
 datareporting.healthreport.service.enabled=false
@@ -133,14 +88,35 @@ datareporting.healthreport.uploadEnabled=false
 toolkit.telemetry.enabled=false
 ```
 
-
-## Cryptography hardening *
-
-This disables algorithms that are known to be weak or broken, and prevents most common attack vectors. Be warned that this may break some older websites that are not compatible with modern protocols.
+## Integration:
 
 ```
-security.tls.unrestricted_rc4_fallback=false *
-security.tls.insecure_fallback_hosts.use_static_list=false *
-security.ssl.require_safe_negotiation=true *
-security.ssl.treat_unsafe_negotiation_as_broken=true *
+loop.enabled=false
+browser.pocket.enabled=false
 ```
+
+## Media:
+
+```
+media.peerconnection.enabled=false
+media.eme.enabled=false
+media.gmp-eme-adobe.enabled=false
+webgl.disabled=true
+```
+
+## Device:
+
+```
+camera.control.face_detection.enabled=false
+camera.control.autofocus_moving_callback.enabled=false
+device.sensors.enabled=false
+```
+
+## Encryption:
+
+```
+security.tls.unrestricted_rc4_fallback=false
+security.tls.insecure_fallback_hosts.use_static_list=false
+```
+
+ 

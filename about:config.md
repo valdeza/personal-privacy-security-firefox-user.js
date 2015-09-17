@@ -61,7 +61,7 @@ network.dns.disablePrefetch=true
 network.prefetch-next=false
 ```
 
-## Browser:
+## Browser
 
 ```
 dom.event.clipboardevents.enabled=false
@@ -73,20 +73,20 @@ browser.send_pings=false
 browser.beacon.enabled=false
 ```
 
-## Geolocation:
+## Geolocation
 
 ```
 geo.enabled=false
 geo.wifi.logging.enabled=false
 ```
 
-## Tracking:
+## Tracking
 
 ```
 privacy.trackingprotection.enabled=true
 ```
 
-## Stats Collection:
+## Stats Collection
 
 ```
 datareporting.healthreport.service.enabled=false
@@ -94,14 +94,14 @@ datareporting.healthreport.uploadEnabled=false
 toolkit.telemetry.enabled=false
 ```
 
-## Integration:
+## Integration
 
 ```
 loop.enabled=false
 browser.pocket.enabled=false
 ```
 
-## Media:
+## Media
 
 ```
 media.peerconnection.enabled=false
@@ -110,7 +110,7 @@ media.gmp-eme-adobe.enabled=false
 webgl.disabled=true
 ```
 
-## Device:
+## Device
 
 ```
 camera.control.face_detection.enabled=false
@@ -118,7 +118,7 @@ camera.control.autofocus_moving_callback.enabled=false
 device.sensors.enabled=false
 ```
 
-## Encryption:
+## Encryption
 
 ```
 security.tls.unrestricted_rc4_fallback=false

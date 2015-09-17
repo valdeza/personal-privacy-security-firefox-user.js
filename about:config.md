@@ -147,18 +147,6 @@ security.ssl.require_safe_negotiation=true *
 security.ssl.treat_unsafe_negotiation_as_broken=true *
 ```
 
-### Disable unnecessary protocols
-
-This disables older protocols that are known to be weak or entirely broken (3DES, RC4 and MD5).
-
-```
-security.ssl3.rsa_rc4_128_sha=false
-security.ssl3.rsa_rc4_128_md5=false
-security.ssl3.rsa_des_ede3_sha=false
-security.ssl3.ecdhe_ecdsa_rc4_128_sha=false
-security.ssl3.ecdhe_rsa_rc4_128_sha=false
-```
-
 # Recommended addons
 
 In addition to the above settings, we recommend the usage of at least the following addons:

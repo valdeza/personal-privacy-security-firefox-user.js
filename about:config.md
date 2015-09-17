@@ -138,17 +138,13 @@ toolkit.telemetry.enabled=false
 
 This disables algorithms that are known to be weak or broken, and prevents most common attack vectors. Be warned that this may break some older websites that are not compatible with modern protocols.
 
-### General settings
+### General
 
 ```
-security.tls.unrestricted_rc4_fallback=false
-security.tls.insecure_fallback_hosts.use_static_list=false
-security.tls.version.min=1
-security.ssl.require_safe_negotiation=true
-security.ssl.treat_unsafe_negotiation_as_broken=true
-security.ssl3.rsa_seed_sha=true
-security.OCSP.enabled=1
-security.OCSP.require=true
+security.tls.unrestricted_rc4_fallback=false *
+security.tls.insecure_fallback_hosts.use_static_list=false *
+security.ssl.require_safe_negotiation=true *
+security.ssl.treat_unsafe_negotiation_as_broken=true *
 ```
 
 ### Disable unnecessary protocols
@@ -161,22 +157,6 @@ security.ssl3.rsa_rc4_128_md5=false
 security.ssl3.rsa_des_ede3_sha=false
 security.ssl3.ecdhe_ecdsa_rc4_128_sha=false
 security.ssl3.ecdhe_rsa_rc4_128_sha=false
-```
-
-### Perfect forward secrecy
-
-If you (additionally) want to force the usage of PFS, the only enabled ciphers should be of the ecdhe/dhe variants. Might break *lots* of stuff.
-
-```
-security.ssl3.rsa_aes_256_sha=false
-```
-
-### Force TLS 1.2
-
-This disables TLS 1.0 and TLS 1.1 completely, which increases security as these older protocols may be used as attack vectors. (Note that TLS technically contains a mechanism for preventing protocol degradation attacks, but it requires participation from both the client and the server - which is not a guarantee in practice)
-
-```
-security.tls.version.min=3
 ```
 
 # Recommended addons

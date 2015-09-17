@@ -138,8 +138,6 @@ toolkit.telemetry.enabled=false
 
 This disables algorithms that are known to be weak or broken, and prevents most common attack vectors. Be warned that this may break some older websites that are not compatible with modern protocols.
 
-### General
-
 ```
 security.tls.unrestricted_rc4_fallback=false *
 security.tls.insecure_fallback_hosts.use_static_list=false *

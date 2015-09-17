@@ -144,19 +144,3 @@ security.tls.insecure_fallback_hosts.use_static_list=false *
 security.ssl.require_safe_negotiation=true *
 security.ssl.treat_unsafe_negotiation_as_broken=true *
 ```
-
-# Recommended addons
-
-In addition to the above settings, we recommend the usage of at least the following addons:
-
-- [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/): Prefer HTTPS over HTTP even for sites that do not force HSTS.
-
-- [μBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/): An efficient blocker. Fast and lean. Block access to all known ads, malware domains, badware, and other malicious scripts and domains.
-
-- [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/)+[RequestPolicy](https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/): Block scripts, images, CSS, objects and other (possibly external) requests by default, using a whitelist to selectively allow them. This is highly recommended as they all pose significant threats to security and privacy.
-
-- [Disconnect](https://addons.mozilla.org/en-US/firefox/addon/disconnect/): Visualize and block invisible tracking of your search and browsing history.
-
-- [Self-Destructing Cookies](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/): Automatically delete cookies and local storage when they are no longer used by open browser tabs.
-
-- [Random Agent Spoofer](https://github.com/dillbyrne/random-agent-spoofer#readme): A privacy enhancing firefox add-on which aims to hinder browser fingerprinting.

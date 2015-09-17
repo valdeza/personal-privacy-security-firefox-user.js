@@ -41,7 +41,7 @@ browser.cache.offline.enable = false
 
 ## Link pre-fetching
 
-These will make Firefox connect with *arbitrary* links on a page by the simple act of hovering over them, without your explicit permission.
+These will make Firefox connect with *arbitrary* links on a page by the simple act of hovering over them, without your explicit permission if not disabled.
 
 ```
 network.http.speculative-parallel-limit=0

@@ -47,6 +47,10 @@ These will make Firefox connect with *arbitrary* links on a page by the simple a
 network.http.speculative-parallel-limit=0
 ```
 
+### All the following settings can be easily disabled with a one additional add-on
+
+The [Privacy Settings](https://addons.mozilla.org/en-GB/firefox/addon/privacy-settings/) by	Jeremy Schomery is new Firefox add-on that save you a lot of time.  
+
 ## Network
 
 ```

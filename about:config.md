@@ -50,9 +50,9 @@ network.http.speculative-parallel-limit=0
 ## Network
 
 ```
-network.websocket.enabled=false *
-network.dns.disablePrefetch=true *
-network.prefetch-next=false *
+network.websocket.enabled=false
+network.dns.disablePrefetch=true
+network.prefetch-next=false
 ```
 
 ## Browser:

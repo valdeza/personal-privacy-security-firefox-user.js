@@ -66,7 +66,7 @@ network.prefetch-next=false
 ## Browser
 
 ```
-dom.event.clipboardevents.enabled=false
+dom.event.clipboardevents.enabled=false (This one has been reported to breaks Google Docs. Only change it if you don't use this service.)
 dom.battery.enabled=false
 browser.safebrowsing.enabled=false
 browser.safebrowsing.downloads.enabled=false

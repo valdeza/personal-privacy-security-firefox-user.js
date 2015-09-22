@@ -74,7 +74,7 @@ browser.safebrowsing.enabled=false
 browser.safebrowsing.downloads.enabled=false
 browser.safebrowsing.malware.enabled=false
 browser.send_pings=false
-browser.beacon.enabled=false
+beacon.enabled=false
 ```
 
 ## Geolocation

@@ -18,6 +18,10 @@ Firefox user.js: This is a user preferences file!
 
 ## Edit History
 
+### 6 Mar 2016
+
+* Synched with https://github.com/pyllyukko/user.js.git
+
 ### 8 Jan 2016
 
 * Commented out privacy.sanitize.sanitizeOnShutdown and related entries  

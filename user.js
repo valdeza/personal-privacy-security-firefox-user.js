@@ -1,8 +1,19 @@
 /******************************************************************************
  * user.js                                                                    *
  * https://github.com/pyllyukko/user.js                                       *
- * Retrieved 18 December 2015                                                 *
+ * Retrieved 6 March 2016                                                     *
  ******************************************************************************/
+
+ /*****************************************************************************
+ * Avoid hardware based fingerprintings                                       *
+ * Canvas/Font's/Plugins                                                      *
+ ******************************************************************************/
+// https://wiki.mozilla.org/Platform/GFX/HardwareAcceleration
+// https://www.macromedia.com/support/documentation/en/flashplayer/help/help01.html
+// https://github.com/dillbyrne/random-agent-spoofer/issues/74
+ user_pref("gfx.direct2d.disabled",		true);
+ user_pref("layers.acceleration.disabled",		true);
+
 
 /******************************************************************************
  * HTML5 / APIs / DOM                                                         *
@@ -21,7 +32,7 @@ user_pref("geo.enabled",		false);
 // Don't reveal your internal IP
 // Check the settings with: http://net.ipcalf.com/
 // https://wiki.mozilla.org/Media/WebRTC/Privacy
-user_pref("media-peerconnection.ice.default_address_only",		true);
+user_pref("media.peerconnection.ice.default_address_only",		true);
 user_pref("media.peerconnection.enabled",		false);
 
 // getUserMedia
@@ -90,7 +101,7 @@ user_pref("webgl.disabled",		true);
  ******************************************************************************/
 
 // Disable face detection by default
-user_pref("camera.control.face_detection.enabled",    false);
+user_pref("camera.control.face_detection.enabled",		false);
 
 // Default search engine
 //user_pref("browser.search.defaultenginename",		"DuckDuckGo");
@@ -113,12 +124,11 @@ user_pref("network.proxy.socks_remote_dns",		true);
 // http://kb.mozillazine.org/Network.proxy.type
 // the default in Firefox for Linux is to use system proxy settings.
 // We change it to direct connection
-//user_pref("network.proxy.type", 0);
+//user_pref("network.proxy.type",		0);
 
-/* Mixed content stuff
- * https://developer.mozilla.org/en-US/docs/Site_Compatibility_for_Firefox_23#Non-SSL_contents_on_SSL_pages_are_blocked_by_default
- * https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/
- */
+// Mixed content stuff
+// https://developer.mozilla.org/en-US/docs/Site_Compatibility_for_Firefox_23#Non-SSL_contents_on_SSL_pages_are_blocked_by_default
+// https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/
 user_pref("security.mixed_content.block_active_content",		true);
 // Mixed Passive Content (a.k.a. Mixed Display Content).
 user_pref("security.mixed_content.block_display_content",		true);
@@ -162,23 +172,33 @@ user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 // https://github.com/pyllyukko/user.js/issues/9#issuecomment-148922065
 user_pref("media.video_stats.enabled",		false);
 
+// Don't reveal build ID
+// Value taken from Tor Browser
+// https://bugzil.la/583181
+user_pref("general.buildID.override",		"20100101");
+
+// Prevent font fingerprinting
+// http://www.browserleaks.com/fonts
+// https://github.com/pyllyukko/user.js/issues/120
+user_pref("browser.display.use_document_fonts",		0);
+
 /******************************************************************************
  * extensions / plugins                                                       *
  *                                                                            *
  ******************************************************************************/
 
 // Require signatures
-//user_pref("xpinstall.signatures.required",   true);
+//user_pref("xpinstall.signatures.required",		true);
 
 // Opt-out of add-on metadata updates
 // https://blog.mozilla.org/addons/how-to-opt-out-of-add-on-metadata-updates/
-user_pref("extensions.getAddons.cache.enabled",   false);
+user_pref("extensions.getAddons.cache.enabled",		false);
 
 // Flash plugin state - never activate
 user_pref("plugin.state.flash",		0);
 
 // disable Gnome Shell Integration
-user_pref("plugin.state.libgnome-shell-browser-plugin",	0);
+user_pref("plugin.state.libgnome-shell-browser-plugin",		0);
 
 // disable the bundled OpenH264 video codec
 // http://forums.mozillazine.org/viewtopic.php?p=13845077&sid=28af2622e8bd8497b9113851676846b1#p13845077
@@ -249,7 +269,7 @@ user_pref("loop.enabled",		false);
 
 // CIS 2.1.1 Enable Auto Update
 // This is disabled for now. it is better to patch through package management.
-//user_pref("app.update.auto", true);
+//user_pref("app.update.auto",		true);
 
 // CIS 2.3.4 Block Reported Web Forgeries
 // http://kb.mozillazine.org/Browser.safebrowsing.enabled
@@ -266,7 +286,7 @@ user_pref("browser.safebrowsing.malware.enabled",		true);
 // This leaks information to google.
 // https://www.mozilla.org/en-US/firefox/39.0/releasenotes/
 // https://wiki.mozilla.org/Security/Application_Reputation
-user_pref("browser.safebrowsing.downloads.remote.enabled",	false);
+user_pref("browser.safebrowsing.downloads.remote.enabled",		false);
 
 // Disable pocket
 // https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox
@@ -292,9 +312,13 @@ user_pref("network.dns.disablePrefetchFromHTTPS",		true);
 
 // https://wiki.mozilla.org/Privacy/Reviews/Necko
 user_pref("network.predictor.enabled",		false);
+// https://wiki.mozilla.org/Privacy/Reviews/Necko#Principle:_Real_Choice
+user_pref("network.seer.enabled",		false);
 
 // http://kb.mozillazine.org/Browser.search.suggest.enabled
 user_pref("browser.search.suggest.enabled",		false);
+// Disable "Show search suggestions in location bar results"
+user_pref("browser.urlbar.suggest.searches",		false);
 
 // Disable SSDP
 // https://bugzil.la/1111967
@@ -306,6 +330,7 @@ user_pref("media.gmp-gmpopenh264.enabled",		false);
 user_pref("media.gmp-manager.url",		"");
 
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_speculative-pre-connections
+// https://bugzil.la/814169
 user_pref("network.http.speculative-parallel-limit",		0);
 
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_mozilla-content
@@ -351,18 +376,25 @@ user_pref("network.http.referer.spoofSource",		true);
 // CIS Version 1.2.0 October 21st, 2011 2.4.3 Disable Referer from an SSL Website
 user_pref("network.http.sendSecureXSiteReferrer",		false);
 
+//PERSONAL// uBlock_o handles cookies.
 // CIS 2.5.1 Accept Only 1st Party Cookies
 // http://kb.mozillazine.org/Network.cookie.cookieBehavior#1
-user_pref("network.cookie.cookieBehavior",		1);
-
+// This breaks a number of payment gateways so you may need to comment it out.
+//user_pref("network.cookie.cookieBehavior",		1);
+// Make sure that third-party cookies (if enabled) never persist beyond the session.
+// https://feeding.cloud.geek.nz/posts/tweaking-cookies-for-privacy-in-firefox/
+// http://kb.mozillazine.org/Network.cookie.thirdparty.sessionOnly
+// https://developer.mozilla.org/en-US/docs/Cookies_Preferences_in_Mozilla#network.cookie.thirdparty.sessionOnly
+user_pref("network.cookie.thirdparty.sessionOnly",		true);
 // user-agent
-//user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0");
+//user_pref("general.useragent.override",		"Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0");
 
 /******************************************************************************
  * Caching                                                                    *
  *                                                                            *
  ******************************************************************************/
 
+//PERSONAL// Commented to enable restoring previous session
 // http://kb.mozillazine.org/Browser.sessionstore.postdata
 // NOTE: relates to CIS 2.5.7
 user_pref("browser.sessionstore.postdata",		0);
@@ -372,6 +404,7 @@ user_pref("browser.sessionstore.postdata",		0);
 // http://kb.mozillazine.org/Browser.cache.offline.enable
 user_pref("browser.cache.offline.enable",		false);
 
+//PERSONAL// Commented out to enable referring to history
 // Always use private browsing
 // https://support.mozilla.org/en-US/kb/Private-Browsing
 // https://wiki.mozilla.org/PrivateBrowsing
@@ -396,7 +429,7 @@ user_pref("browser.cache.offline.enable",		false);
 
 // The cookie expires at the end of the session (when the browser closes).
 // http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2
-//user_pref("network.cookie.lifetimePolicy",		2);
+user_pref("network.cookie.lifetimePolicy",		2);
 
 // http://kb.mozillazine.org/Browser.cache.disk.enable
 user_pref("browser.cache.disk.enable",		false);
@@ -411,6 +444,7 @@ user_pref("browser.cache.disk_cache_ssl",		false);
 // CIS Version 1.2.0 October 21st, 2011 2.5.2 Disallow Credential Storage
 user_pref("signon.rememberSignons",		false);
 
+//PERSONAL// Commented out of suspicion of breaking session restore
 // CIS Version 1.2.0 October 21st, 2011 2.5.4 Delete History and Form Data
 // http://kb.mozillazine.org/Browser.history_expire_days
 //user_pref("browser.history_expire_days",		0);
@@ -499,6 +533,7 @@ user_pref("browser.urlbar.autocomplete.enabled",		false);
 // https://www.torproject.org/projects/torbrowser/design/#identifier-linkability
 user_pref("signon.autofillForms",		false);
 
+//PERSONAL// Sometimes I switch default browser
 // do not check if firefox is the default browser
 //user_pref("browser.shell.checkDefaultBrowser",		false);
 
@@ -546,6 +581,10 @@ user_pref("security.enable_ssl3",		false);
 // "2. Strict. Pinning is always enforced."
 user_pref("security.cert_pinning.enforcement_level",		2);
 
+// Kill SHA1 certificates
+// https://bugzilla.mozilla.org/show_bug.cgi?id=942515#c32
+user_pref("security.pki.sha1_enforcement_level", 2);
+
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.treat_unsafe_negotiation_as_broken
 // see also CVE-2009-3555
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken",		true);
@@ -568,7 +607,8 @@ user_pref("security.ssl.errorReporting.automatic",		false);
 /******************************************************************************
  * CIPHERS                                                                    *
  *                                                                            *
- * you can debug the SSL handshake with tshark: tshark -t ad -n -i wlan0 -T text -V -R ssl.handshake
+ * you can debug the SSL handshake with tshark:                               *
+ *     tshark -t ad -n -i wlan0 -T text -V -R ssl.handshake                   *
  ******************************************************************************/
 
 // disable null ciphers
@@ -579,9 +619,8 @@ user_pref("security.ssl3.ecdhe_ecdsa_null_sha",		false);
 user_pref("security.ssl3.ecdh_rsa_null_sha",		false);
 user_pref("security.ssl3.ecdh_ecdsa_null_sha",		false);
 
-/* SEED
- * https://en.wikipedia.org/wiki/SEED
- */
+// SEED
+// https://en.wikipedia.org/wiki/SEED
 user_pref("security.ssl3.rsa_seed_sha",		false);
 
 // 40 bits...
@@ -612,17 +651,10 @@ user_pref("security.ssl3.rsa_rc4_128_sha",		false);
 // https://rc4.io/
 user_pref("security.tls.unrestricted_rc4_fallback",		false);
 
-/*
- * 3DES -> false because effective key size < 128
- *
- *   https://en.wikipedia.org/wiki/3des#Security
- *   http://en.citizendium.org/wiki/Meet-in-the-middle_attack
- *
- *
- * See also: 
- *
- * http://www-archive.mozilla.org/projects/security/pki/nss/ssl/fips-ssl-ciphersuites.html
- */
+// 3DES -> false because effective key size < 128
+// https://en.wikipedia.org/wiki/3des#Security
+// http://en.citizendium.org/wiki/Meet-in-the-middle_attack
+// http://www-archive.mozilla.org/projects/security/pki/nss/ssl/fips-ssl-ciphersuites.html
 user_pref("security.ssl3.dhe_dss_des_ede3_sha",		false);
 user_pref("security.ssl3.dhe_rsa_des_ede3_sha",		false);
 user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha",		false);

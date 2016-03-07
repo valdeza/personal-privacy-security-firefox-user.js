@@ -16,6 +16,11 @@ Firefox user.js: This is a user preferences file!
   1. Important Modified Preferences: There should be a lot of new entries that correspond to lines from this file.
   2. user.js Preferences: This section might not have existed before, but now does.
 
+## Reminder: Merging from Further Upstream
+
+Use the respective *-port/filter branch to only capture differences from the pyllyukko base template.  
+Then merge into the *-port branch by "translating" the filediff into a user.js file that can be copied straight into trunk master.
+
 ## Edit History
 
 ### 6 Mar 2016

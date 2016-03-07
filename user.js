@@ -719,3 +719,12 @@ user_pref("camera.control.autofocus_moving_callback.enabled",		false);
  * Retrieved 22 December 2015                                                                                         *
  **********************************************************************************************************************/
 user_pref("plugin.scan.plid.all",		false);
+
+
+
+/******************************************************************************
+ * Personal additions                                                         *
+ * Updated 7 March 2016                                                       *
+ ******************************************************************************/
+// Load pop-ups as a normal tab (no UI minimisation/restriction)
+user_pref("browser.link.open_newwindow.restriction",		0);

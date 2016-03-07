@@ -23,6 +23,12 @@ Then merge into the *-port branch by "translating" the filediff into a user.js f
 
 ## Edit History
 
+### 7 Mar 2016
+
+* New section: Personal additions
+  * `\+browser.link.open_newwindow.restriction ; 0`  
+    Loads pop-ups as a normal tab (no UI minimisation/restriction)
+
 ### 6 Mar 2016
 
 * Synched with https://github.com/pyllyukko/user.js.git

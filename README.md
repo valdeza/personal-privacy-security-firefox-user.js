@@ -26,6 +26,7 @@ Then merge into the *-port branch by "translating" the filediff into a user.js f
 ### 18 Mar 2016
 
 * Synched with https://gist.github.com/2cfe333d19adbf03ef7b.git (BytesTuner's gist)
+* Synched with https://gist.github.com/69e19fc2fe0e25f3cff5.git (haasn's gist)
 * Added note that `dom.event.clipboardevents.enabled ; false` will break Google Docs copy/paste functionality.  
   _(Can temporarily re-enabled through about:config)_
 * Modify: `browser.safebrowsing.*.enabled ; false`  

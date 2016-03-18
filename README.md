@@ -26,11 +26,16 @@ Then merge into the *-port branch by "translating" the filediff into a user.js f
 ### 18 Mar 2016
 
 * Synched with https://gist.github.com/2cfe333d19adbf03ef7b.git (BytesTuner's gist)
+* Added note that `dom.event.clipboardevents.enabled ; false` will break Google Docs copy/paste functionality.  
+  _(Can temporarily re-enabled through about:config)_
+* Modify: `browser.safebrowsing.*.enabled ; false`  
+  It is advised to use a hosts file instead of depending on Google.  
+  Even if it appears that you are comparing the current site's hash against a pre-downloaded blacklist, Google can possibly censor sites as "malicious" \[citation needed: what do they base these blacklists off of?\]. Also, this might possibly reduce exposure to Google.
 
 ### 7 Mar 2016
 
 * New section: Personal additions
-  * `\+browser.link.open_newwindow.restriction ; 0`  
+  * `+ browser.link.open_newwindow.restriction ; 0`  
     Loads pop-ups as a normal tab (no UI minimisation/restriction)
 
 ### 6 Mar 2016

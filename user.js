@@ -46,6 +46,8 @@ user_pref("dom.telephony.enabled",		false);
 // https://developer.mozilla.org/en-US/docs/Web/API/navigator.sendBeacon
 user_pref("beacon.enabled",		false);
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
+//PERSONAL// Breaks Google Docs's copy/paste functionality. 
+//////////// Can be temporarily re-enabled through about:config.
 user_pref("dom.event.clipboardevents.enabled",		false);
 // https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI
 user_pref("dom.enable_performance",		false);
@@ -271,16 +273,18 @@ user_pref("loop.enabled",		false);
 // This is disabled for now. it is better to patch through package management.
 //user_pref("app.update.auto",		true);
 
+//PERSONAL// browser.safebrowsing.* disabled; using a hosts file instead of depending on Google.
+
 // CIS 2.3.4 Block Reported Web Forgeries
 // http://kb.mozillazine.org/Browser.safebrowsing.enabled
 // http://kb.mozillazine.org/Safe_browsing
 // https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work
 // http://forums.mozillazine.org/viewtopic.php?f=39&t=2711237&p=12896849#p12896849
-user_pref("browser.safebrowsing.enabled",		true);
+//user_pref("browser.safebrowsing.enabled",		true);
 
 // CIS 2.3.5 Block Reported Attack Sites
 // http://kb.mozillazine.org/Browser.safebrowsing.malware.enabled
-user_pref("browser.safebrowsing.malware.enabled",		true);
+//user_pref("browser.safebrowsing.malware.enabled",		true);
 
 // Disable safe browsing remote lookups for downloaded files.
 // This leaks information to google.
@@ -705,6 +709,9 @@ user_pref("media.eme.enabled",		false);	// DRM
 user_pref("media.gmp-eme-adobe.enabled",		false);	// DRM
 user_pref("geo.wifi.logging.enabled",		false);
 user_pref("geo.wifi.uri",		"");
+user_pref("browser.safebrowsing.enabled",		false);
+user_pref("browser.safebrowsing.downloads.enabled",		false);
+user_pref("browser.safebrowsing.malware.enabled",		false);
 user_pref("social.directories",		"");
 user_pref("social.whitelist",		"");
 user_pref("social.manifest.facebook",		"");

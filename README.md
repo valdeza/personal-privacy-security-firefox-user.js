@@ -23,6 +23,10 @@ Then merge into the *-port branch by "translating" the filediff into a user.js f
 
 ## Edit History
 
+### 18 Mar 2016
+
+* Synched with https://gist.github.com/2cfe333d19adbf03ef7b.git (BytesTuner's gist)
+
 ### 7 Mar 2016
 
 * New section: Personal additions
